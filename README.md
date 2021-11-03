@@ -13,7 +13,7 @@ Este recurso nace de la unión de varios saberes y voluntades.
 
 <br/>
 
-**[bibliotech.biz/](https://herokubibliotech.herokuapp.com/)**
+**[bibliotech.biz/](www.bibliotech.biz)**
 
 <br/>
 
@@ -22,6 +22,3 @@ Equipo de desarrollo:
 * [Andrés Felipe Alvarez](https://github.com/afar-cmyk)
 * [Luis Fernando Delgado](https://github.com/lufermaxi)
 > Buenas lecturas :)
-
-
-
