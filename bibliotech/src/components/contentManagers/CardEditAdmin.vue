@@ -21,7 +21,8 @@
     <!-- Seccion inferior de la carta -->
     <div class="carta-footer">
       <div class="carta-footer__botones">
-        <a class="carta-footer__botones carta-footer__botones--cancelar" 
+        <a
+          class="carta-footer__botones carta-footer__botones--cancelar"
           @click="borrar(admin.id)"
           >Borrar</a
         >
@@ -159,7 +160,7 @@
   </div>
 </template>
 <script>
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 export default {
   props: {
@@ -174,7 +175,7 @@ export default {
   },
   data() {
     return {
-      url: "https://herokuappbiblio.herokuapp.com/api/",
+      url: "https://bibliotech-conection.herokuapp.com/api/",
       form: {
         id: "",
         nombre: "",
@@ -197,10 +198,10 @@ export default {
         cancelButtonColor: "#ad0202",
         confirmButtonText: "Si, eliminalo!",
         customClass: {
-          actions: 'my-actions',
-          confirmButton: 'order-3',
-          cancelButton: 'order-2',
-        }
+          actions: "my-actions",
+          confirmButton: "order-3",
+          cancelButton: "order-2",
+        },
       }).then((result) => {
         if (result.isConfirmed) {
           this.axios.delete(this.url + id).then((response) => {
@@ -211,12 +212,12 @@ export default {
     },
     editAdmin() {
       console.log(this.admin);
-      this.form.id = this.admin.id,
-      this.form.nombre = this.admin.nombre,
-      this.form.apellido = this.admin.apellido,
-      this.form.contraseña = this.admin.contraseña,
-      this.form.usuario = this.admin.usuario,
-      this.form.correo = this.admin.correo;
+      (this.form.id = this.admin.id),
+        (this.form.nombre = this.admin.nombre),
+        (this.form.apellido = this.admin.apellido),
+        (this.form.contraseña = this.admin.contraseña),
+        (this.form.usuario = this.admin.usuario),
+        (this.form.correo = this.admin.correo);
     },
     editar(id) {
       console.log(id);
@@ -228,10 +229,10 @@ export default {
         confirmButtonColor: "#485eb2",
         denyButtonColor: "#ad0202",
         customClass: {
-          actions: 'my-actions',
-          confirmButton: 'order-3',
-          denyButton: 'order-2',
-        }
+          actions: "my-actions",
+          confirmButton: "order-3",
+          denyButton: "order-2",
+        },
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {

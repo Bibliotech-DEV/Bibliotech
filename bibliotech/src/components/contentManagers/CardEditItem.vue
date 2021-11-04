@@ -180,7 +180,7 @@
   </div>
 </template>
 <script>
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 export default {
   props: {
@@ -195,7 +195,7 @@ export default {
   },
   data() {
     return {
-      url: "https://herokuappbiblio.herokuapp.com/api/articulos/",
+      url: "https://bibliotech-conection.herokuapp.com/api/articulos/",
       form: {
         id: "",
         nombre: "",
@@ -209,12 +209,12 @@ export default {
   },
   methods: {
     editItem() {
-      this.form.id = this.articulo.id,
-      this.form.isbn = this.articulo.isbn,
-      this.form.nombre = this.articulo.nombre,
-      this.form.nombre_autor = this.articulo.nombre_autor,
-      this.form.nombre_editorial = this.articulo.nombre_editorial,
-      this.form.nombre_categoria = this.articulo.nombre_categoria;
+      (this.form.id = this.articulo.id),
+        (this.form.isbn = this.articulo.isbn),
+        (this.form.nombre = this.articulo.nombre),
+        (this.form.nombre_autor = this.articulo.nombre_autor),
+        (this.form.nombre_editorial = this.articulo.nombre_editorial),
+        (this.form.nombre_categoria = this.articulo.nombre_categoria);
     },
     editar(id) {
       console.log(id);
@@ -226,10 +226,10 @@ export default {
         confirmButtonColor: "#485eb2",
         denyButtonColor: "#ad0202",
         customClass: {
-          actions: 'my-actions',
-          confirmButton: 'order-3',
-          denyButton: 'order-2',
-        }
+          actions: "my-actions",
+          confirmButton: "order-3",
+          denyButton: "order-2",
+        },
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
@@ -252,10 +252,10 @@ export default {
         cancelButtonColor: "#ad0202",
         confirmButtonText: "Si, eliminalo!",
         customClass: {
-          actions: 'my-actions',
-          confirmButton: 'order-3',
-          cancelButton: 'order-2',
-        }
+          actions: "my-actions",
+          confirmButton: "order-3",
+          cancelButton: "order-2",
+        },
       }).then((result) => {
         if (result.isConfirmed) {
           this.axios.delete(this.url + id).then((response) => {

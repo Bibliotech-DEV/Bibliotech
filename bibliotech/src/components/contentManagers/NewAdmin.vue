@@ -115,7 +115,10 @@
             @click="$bvModal.hide(`modal-creation`)"
             >Volver</b-button
           >
-          <b-button type="submit" variant="success" class="boton-modal-a mb-0"
+          <b-button
+            type="submit"
+            variant="success"
+            class="boton-modal-a mb-0"
             @click="crear()"
             >Crear</b-button
           >
@@ -140,7 +143,7 @@ export default {
   },
   data() {
     return {
-      url: "https://herokuappbiblio.herokuapp.com/api/",
+      url: "https://bibliotech-conection.herokuapp.com/api/",
       form: {
         id: "",
         nombre: "",
@@ -161,10 +164,10 @@ export default {
         confirmButtonColor: "#485eb2",
         denyButtonColor: "#ad0202",
         customClass: {
-          actions: 'my-actions',
-          confirmButton: 'order-3',
-          denyButton: 'order-2',
-        }
+          actions: "my-actions",
+          confirmButton: "order-3",
+          denyButton: "order-2",
+        },
       }).then((result) => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
@@ -178,11 +181,11 @@ export default {
     },
     editAdmin() {
       console.log(this.admin);
-      this.form.usuario = this.admin.usuario,
-      this.form.contraseña = this.admin.contraseña,
-      this.form.correo = this.admin.correo,
-      this.form.nombre = this.admin.nombre,
-      this.form.apellido = this.admin.apellido;
+      (this.form.usuario = this.admin.usuario),
+        (this.form.contraseña = this.admin.contraseña),
+        (this.form.correo = this.admin.correo),
+        (this.form.nombre = this.admin.nombre),
+        (this.form.apellido = this.admin.apellido);
     },
     onSubmit(event) {
       event.preventDefault();

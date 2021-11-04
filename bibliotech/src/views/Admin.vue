@@ -56,7 +56,7 @@ export default {
   },
   data() {
     return {
-      url: "https://herokuappbiblio.herokuapp.com/api/",
+      url: "https://bibliotech-conection.herokuapp.com/api/",
       admins: [
         {
           id: "",
@@ -235,29 +235,29 @@ export default {
   box-sizing: border-box;
   padding-bottom: 40px;
 }
-@media (min-width: 1234px) { 
-  .grilla-responsive{
-  grid-template-columns: repeat(auto-fit, minmax(260px, 0.46fr));
+@media (min-width: 1234px) {
+  .grilla-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 0.46fr));
   }
-  .barra-lateral{
+  .barra-lateral {
     height: 100%;
   }
 }
-@media (max-width: 1233px) { 
- .barra-lateral{
+@media (max-width: 1233px) {
+  .barra-lateral {
     height: 100%;
   }
 }
-@media (min-width: 1367px) { 
-  .grilla-responsive{
-  grid-template-columns: repeat(auto-fit, minmax(320px, 0.46fr));
-}
-.barra-lateral{
+@media (min-width: 1367px) {
+  .grilla-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 0.46fr));
+  }
+  .barra-lateral {
     height: 100%;
   }
 }
-@media (min-width: 1658px) { 
-.barra-lateral{
+@media (min-width: 1658px) {
+  .barra-lateral {
     height: 51vw;
   }
 }

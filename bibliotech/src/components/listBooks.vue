@@ -36,7 +36,11 @@
             :key="articulo.id"
           >
             <!--Libro 1-->
-            <div class="option-book" v-b-modal.modal-book6 @click="llenarModal(articulo)">
+            <div
+              class="option-book"
+              v-b-modal.modal-book6
+              @click="llenarModal(articulo)"
+            >
               <!--Imagen de categoría-->
               <span v-if="articulo.nombre_categoria == 'Académico'">
                 <img
@@ -89,43 +93,39 @@
             <!--Modal con más información del libro y solicitud-->
           </b-col>
           <b-modal
-              id="modal-book6"
-              size="sm"
-              centered
-              ok-only
-              hide-footer
-              no-stacking
-            >
-              <p class="info-book">
-                <!--Datos extra-->
-                Formato: {{ dataModal.nombre_categoria }} <br />{{
-                  dataModal.nombre
-                }}
-                <br />{{ dataModal.nombre_autor }} <br />2004 <br />{{ dataModal.nombre_editorial }}
-                <br />ISBN {{ dataModal.isbn }} <br /><b>Disponible</b>
-              </p>
-              <div class="btn-solitude">
-                <b-button v-b-modal.modal-solitude6>Solicitar</b-button
-                ><!--Botón solicitar-->
-              </div>
-            </b-modal>
-            <!--Modal con confirmación, se puede reemplazar por el plugin de sweet alert-->
-            <b-modal
-              id="modal-solitude6"
-              size="sm"
-              centered
-              ok-only
-              hide-footer
-            >
-              <div class="confirmed-box">
-                <div class="box-check">
-                  <div class="confirmed-icon">
-                    <b-icon icon="check-circle"></b-icon>
-                  </div>
-                  <p class="confirmed-text">¡Su préstamo ha sido exitoso!</p>
+            id="modal-book6"
+            size="sm"
+            centered
+            ok-only
+            hide-footer
+            no-stacking
+          >
+            <p class="info-book">
+              <!--Datos extra-->
+              Formato: {{ dataModal.nombre_categoria }} <br />{{
+                dataModal.nombre
+              }}
+              <br />{{ dataModal.nombre_autor }} <br />2004 <br />{{
+                dataModal.nombre_editorial
+              }}
+              <br />ISBN {{ dataModal.isbn }} <br /><b>Disponible</b>
+            </p>
+            <div class="btn-solitude">
+              <b-button v-b-modal.modal-solitude6>Solicitar</b-button
+              ><!--Botón solicitar-->
+            </div>
+          </b-modal>
+          <!--Modal con confirmación, se puede reemplazar por el plugin de sweet alert-->
+          <b-modal id="modal-solitude6" size="sm" centered ok-only hide-footer>
+            <div class="confirmed-box">
+              <div class="box-check">
+                <div class="confirmed-icon">
+                  <b-icon icon="check-circle"></b-icon>
                 </div>
+                <p class="confirmed-text">¡Su préstamo ha sido exitoso!</p>
               </div>
-            </b-modal>
+            </div>
+          </b-modal>
         </b-row>
       </div>
     </b-container>
@@ -136,8 +136,8 @@
 export default {
   data() {
     return {
-      url: "https://herokuappbiblio.herokuapp.com/api/articulos/",
-      url1: "https://herokuappbiblio.herokuapp.com/categorias/",
+      url: "https://bibliotech-conection.herokuapp.com/api/articulos/",
+      url1: "https://bibliotech-conection.herokuapp.com/categorias/",
       articulos: [],
       books: ["Académico", "Digital", "Ilustración", "Manual", "Revista"],
       libro: "",
@@ -180,15 +180,15 @@ export default {
       }
     },
     llenarModal(art) {
-      console.log(art)
+      console.log(art);
       this.dataModal = art;
-    }
+    },
   },
 };
 </script>
 <style scoped>
-.form-control{
-    border: 1px solid #ff3000 !important;
+.form-control {
+  border: 1px solid #ff3000 !important;
 }
 .btn-secondary {
   background-color: #485eb2 !important;

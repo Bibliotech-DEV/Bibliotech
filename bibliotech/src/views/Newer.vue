@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex ">
+  <div class="d-flex">
     <!-- Barra de navegación -->
     <aside class="d-flex flex-column barra-lateral">
       <SideBar :option="1" />
@@ -44,21 +44,17 @@
             </div>
             <!-- FIN Titulo -->
 
-
-              <div class="grilla-responsive">
-                <TarjetaAdmin
+            <div class="grilla-responsive">
+              <TarjetaAdmin
                 v-for="(admin, index) in admins"
                 :key="index"
                 :index="index"
                 :admin="admin"
               />
-              </div>
-
-
-
+            </div>
 
             <!-- Envoltura para las cajas -->
-              <!-- <div class="caja__cartas"> 
+            <!-- <div class="caja__cartas"> 
               <TarjetaAdmin
                 v-for="(admin, index) in admins"
                 :key="index"
@@ -66,10 +62,6 @@
                 :admin="admin"
               /> -->
             <!-- </div> FIN Envoltura para las cajas -->
-
-
-
-
           </div>
         </div>
       </div>
@@ -89,8 +81,8 @@ export default {
   },
   data() {
     return {
-      url: "https://herokuappbiblio.herokuapp.com/api/articulos/reciente/",
-      url1: "https://herokuappbiblio.herokuapp.com/api/reciente/",
+      url: "https://bibliotech-conection.herokuapp.com/api/articulos/reciente/",
+      url1: "https://bibliotech-conection.herokuapp.com/api/reciente/",
       articulos: [
         {
           id: "",
@@ -187,7 +179,7 @@ export default {
   align-items: flex-start;
 }
 
-.caja__cartas2{
+.caja__cartas2 {
   background-color: rgb(57, 20, 220);
 }
 .segmentos-centrales__separador {
@@ -199,27 +191,27 @@ export default {
   height: 1px;
   width: 100%;
 }
-@media (min-width: 768px) { 
-  .contenido{
+@media (min-width: 768px) {
+  .contenido {
     background-color: rgb(255, 255, 255);
   }
 }
-@media (min-width: 1233px) { 
-.contenido{
+@media (min-width: 1233px) {
+  .contenido {
     background-color: rgb(255, 255, 255);
   }
 }
-@media (min-width: 1366px) { 
- .contenido{
+@media (min-width: 1366px) {
+  .contenido {
     background-color: rgb(255, 255, 255);
   }
 }
-.caja__cartas1{
+.caja__cartas1 {
   background-color: crimson;
 
   margin-right: 10px;
 }
-.cuadricula-tarjeta{
+.cuadricula-tarjeta {
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -234,29 +226,29 @@ export default {
   box-sizing: border-box;
   padding-bottom: 40px;
 }
-@media (min-width: 1234px) { 
-  .grilla-responsive{
-  grid-template-columns: repeat(auto-fit, minmax(260px, 0.46fr));
+@media (min-width: 1234px) {
+  .grilla-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 0.46fr));
   }
-  .barra-lateral{
+  .barra-lateral {
     height: 100%;
   }
 }
-@media (max-width: 1233px) { 
- .barra-lateral{
+@media (max-width: 1233px) {
+  .barra-lateral {
     height: 100%;
   }
 }
-@media (min-width: 1367px) { 
-  .grilla-responsive{
-  grid-template-columns: repeat(auto-fit, minmax(320px, 0.46fr));
-}
-.barra-lateral{
+@media (min-width: 1367px) {
+  .grilla-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 0.46fr));
+  }
+  .barra-lateral {
     height: 100%;
   }
 }
-@media (min-width: 1658px) { 
-.barra-lateral{
+@media (min-width: 1658px) {
+  .barra-lateral {
     height: 51vw;
   }
 }
