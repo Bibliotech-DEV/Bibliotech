@@ -43,7 +43,7 @@
                 <p>
                   <b>Bibliotech</b> es un sistema de gestión de libros dirigido
                   a los servicios bibliotecarios y a sus usuarios que aman los
-                  libros. (build)
+                  libros.
                 </p>
               </b-card-text>
             </b-card>
