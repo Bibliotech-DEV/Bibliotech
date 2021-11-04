@@ -7,7 +7,7 @@
         <!-- Contenedor invisible principal -->
         <b-container class="d-flex justify-content-center h-100">
           <!-- Tarjeta blanca -->
-          <div class="contenedor-login ">
+          <div class="contenedor-login">
             <!-- Contenedor superior de la tarjeta blanca -->
             <div class="login-header mb-4">
               <img
@@ -78,7 +78,7 @@ import Swal from "sweetalert2";
 export default {
   data() {
     return {
-      url: "https://herokuappbiblio.herokuapp.com/api/login",
+      url: "https://bibliotechapi.herokuapp.com/api/login",
       usuario: "",
       contraseña: "",
     };
