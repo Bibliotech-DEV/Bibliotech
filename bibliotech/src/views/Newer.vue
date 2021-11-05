@@ -81,8 +81,8 @@ export default {
   },
   data() {
     return {
-      url: "https://bibliotech-conection.herokuapp.com/api/articulos/reciente/",
-      url1: "https://bibliotech-conection.herokuapp.com/api/reciente/",
+      url: "https://bibliotech-conection.herokuapp.com/api/articulos_recientes",
+      url1: "https://bibliotech-conection.herokuapp.com/api/usuarios_recientes",
       articulos: [
         {
           id: "",
