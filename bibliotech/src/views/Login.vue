@@ -22,6 +22,7 @@
               <!-- Nombre de usuario -->
               <div class="form-floating mb-3">
                 <input
+                  @keyup.enter="ingresar()"
                   type="username"
                   v-model="usuario"
                   class="form-control"
@@ -38,6 +39,7 @@
               <!-- Contraseña -->
               <div class="form-floating">
                 <input
+                  @keyup.enter="ingresar()"
                   type="password"
                   v-model="contraseña"
                   class="form-control"
