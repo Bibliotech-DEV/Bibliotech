@@ -38,6 +38,7 @@
             :id="`modal-admin-${index}`"
             :title="`Editando: ${form.nombre} ${form.apellido}`"
             hide-footer
+            centered
           >
             <b-form @submit="onSubmit">
               <b-container>

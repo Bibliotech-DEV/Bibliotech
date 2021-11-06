@@ -41,6 +41,7 @@
             :id="`modal-item-${index}`"
             :title="`Editando: ${form.nombre}`"
             hide-footer
+            centered
           >
             <!-- <p class="my-4">{{item}}</p> -->
             <b-form @submit="onSubmit">
