@@ -111,7 +111,7 @@
           <b-button
             class="boton-modal-b mb-0"
             variant="danger"
-            @click="$bvModal.hide(`modal-${index}`)"
+            @click="$bvModal.hide(`modal-creation`)"
             >Volver</b-button
           >
           <b-button

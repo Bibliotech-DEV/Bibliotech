@@ -161,7 +161,7 @@
                 <b-button
                   class="boton-modal-b mb-0"
                   variant="danger"
-                  @click="$bvModal.hide(`modal-${index}`)"
+                  @click="$bvModal.hide(`modal-item-${index}`)"
                   >Cancelar</b-button
                 >
                 <b-button
@@ -238,6 +238,8 @@ export default {
           });
         } else if (result.isDenied) {
           Swal.fire("No se guardo la informacion", "", "info");
+        } else {
+          Swal.close();
         }
       });
     },
@@ -250,6 +252,7 @@ export default {
         showCancelButton: true,
         confirmButtonColor: "#485eb2",
         cancelButtonColor: "#ad0202",
+        cancelButtonText: "Cancelar",
         confirmButtonText: "Si, eliminalo!",
         customClass: {
           actions: "my-actions",
@@ -261,6 +264,8 @@ export default {
           this.axios.delete(this.url + id).then((response) => {
             location.reload();
           });
+        } else {
+          Swal.close();
         }
       });
     },
