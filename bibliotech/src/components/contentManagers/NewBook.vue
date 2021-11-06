@@ -140,7 +140,7 @@ export default {
       default: () => 1,
     },
   },
-  async data() {
+  data() {
     return {
       url: "https://bibliotech-conection.herokuapp.com/api/articulos/",
       form: {
@@ -187,7 +187,7 @@ export default {
         (this.form.nombre_editorial = this.articulo.nombre_editorial),
         (this.form.nombre_categoria = this.articulo.nombre_categoria);
     },
-    onSubmit(event) {
+    async onSubmit(event) {
       event.preventDefault();
       console.log(JSON.stringify(this.form));
     },
