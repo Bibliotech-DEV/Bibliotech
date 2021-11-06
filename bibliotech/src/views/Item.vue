@@ -76,11 +76,11 @@ export default {
       ],
     };
   },
-  created() {
+  async created() {
     this.mostrar();
   },
   methods: {
-    mostrar() {
+    async mostrar() {
       this.axios.get(this.url).then((response) => {
         this.articulos = response.data;
       });

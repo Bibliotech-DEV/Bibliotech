@@ -140,7 +140,7 @@ export default {
       default: () => 1,
     },
   },
-  data() {
+  async data() {
     return {
       url: "https://bibliotech-conection.herokuapp.com/api/articulos/",
       form: {
@@ -155,7 +155,7 @@ export default {
     };
   },
   methods: {
-    crear() {
+    async crear() {
       Swal.fire({
         title: "¿Desea crear este nuevo articulo?",
         showDenyButton: true,
@@ -179,7 +179,7 @@ export default {
         }
       });
     },
-    editItem() {
+    async editItem() {
       console.log(this.articulo);
       (this.form.isbn = this.articulo.isbn),
         (this.form.nombre = this.articulo.nombre),
