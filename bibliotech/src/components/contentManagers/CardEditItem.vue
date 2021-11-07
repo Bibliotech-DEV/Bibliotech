@@ -162,7 +162,7 @@
                 <b-button
                   class="boton-modal-b mb-0"
                   variant="danger"
-                  @click="$bvModal.hide(`modal-item-${index}`)"
+                  @click="cerrarModal()"
                   >Cancelar</b-button
                 >
                 <b-button
@@ -209,6 +209,9 @@ export default {
     };
   },
   methods: {
+    cerrarModal() {
+      this.$bvModal.hide(`modal-item-${this.index}`);
+    },
     editItem() {
       (this.form.id = this.articulo.id),
         (this.form.isbn = this.articulo.isbn),
@@ -235,12 +238,11 @@ export default {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
           this.axios.put(this.url + id, this.form).then((response) => {
-            location.reload();
+            this.cerrarModal();
+            window.location.href = "/Item";
           });
         } else if (result.isDenied) {
           Swal.fire("No se guardo la informacion", "", "info");
-        } else {
-          Swal.close();
         }
       });
     },
