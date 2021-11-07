@@ -142,7 +142,7 @@
                 <b-button
                   class="boton-modal-b mb-0"
                   variant="danger"
-                  @click="$bvModal.hide(`modal-admin-${index}`)"
+                  @click="cerrarModal()"
                   >Volver</b-button
                 >
                 <b-button
@@ -188,6 +188,12 @@ export default {
     };
   },
   methods: {
+    refrescarPadre() {
+      this.$parent.mostrar();
+    },
+    cerrarModal() {
+      this.$bvModal.hide(`modal-admin-${this.index}`);
+    },
     borrar(id) {
       console.log(id);
       Swal.fire({
@@ -197,6 +203,7 @@ export default {
         showCancelButton: true,
         confirmButtonColor: "#485eb2",
         cancelButtonColor: "#ad0202",
+        cancelButtonText: "Cancelar",
         confirmButtonText: "Si, eliminalo!",
         customClass: {
           actions: "my-actions",
@@ -206,7 +213,8 @@ export default {
       }).then((result) => {
         if (result.isConfirmed) {
           this.axios.delete(this.url + id).then((response) => {
-            location.reload();
+            this.refrescarPadre();
+            this.cerrarModal();
           });
         }
       });
@@ -238,10 +246,17 @@ export default {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
           this.axios.put(this.url + id, this.form).then((response) => {
-            location.reload();
+            this.refrescarPadre();
+            this.cerrarModal();
           });
         } else if (result.isDenied) {
-          Swal.fire("No se guardo la informacion", "", "info");
+          Swal.fire({
+            icon: "info",
+            title: "No se guardo la información",
+            confirmButtonText: "Ok",
+            confirmButtonColor: "#485eb2",
+          });
+          this.refrescarPadre();
         }
       });
     },

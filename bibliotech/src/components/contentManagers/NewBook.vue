@@ -111,7 +111,7 @@
           <b-button
             class="boton-modal-b mb-0"
             variant="danger"
-            @click="$bvModal.hide(`modal-creation`)"
+            @click="cerrarModal()"
             >Volver</b-button
           >
           <b-button
@@ -155,7 +155,13 @@ export default {
     };
   },
   methods: {
-    async crear() {
+    refrescarPadre() {
+      this.$parent.mostrar();
+    },
+    cerrarModal() {
+      this.$bvModal.hide(`modal-creation`);
+    },
+    crear() {
       Swal.fire({
         title: "¿Desea crear este nuevo articulo?",
         showDenyButton: true,
@@ -172,14 +178,19 @@ export default {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
           this.axios.post(this.url, this.form).then((response) => {
-            location.reload();
+            this.refrescarPadre();
+            this.cerrarModal();
           });
         } else if (result.isDenied) {
-          Swal.fire("No se guardo el articulo", "", "info");
+          Swal.fire({
+            title: "No se guardo el articulo",
+            icon: "info",
+            confirmButtonColor: "#485eb2",
+          });
         }
       });
     },
-    async editItem() {
+    editItem() {
       console.log(this.articulo);
       (this.form.isbn = this.articulo.isbn),
         (this.form.nombre = this.articulo.nombre),
@@ -187,7 +198,7 @@ export default {
         (this.form.nombre_editorial = this.articulo.nombre_editorial),
         (this.form.nombre_categoria = this.articulo.nombre_categoria);
     },
-    async onSubmit(event) {
+    onSubmit(event) {
       event.preventDefault();
       console.log(JSON.stringify(this.form));
     },

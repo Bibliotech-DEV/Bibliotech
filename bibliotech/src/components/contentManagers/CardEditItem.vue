@@ -209,8 +209,8 @@ export default {
     };
   },
   methods: {
-    pushItem() {
-      this.$router.go({ path: "Item" });
+    refrescarPadre() {
+      this.$parent.mostrar();
     },
     cerrarModal() {
       this.$bvModal.hide(`modal-item-${this.index}`);
@@ -238,14 +238,19 @@ export default {
           denyButton: "order-2",
         },
       }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
           this.axios.put(this.url + id, this.form).then((response) => {
+            this.refrescarPadre();
             this.cerrarModal();
-            this.pushItem();
           });
         } else if (result.isDenied) {
-          Swal.fire("No se guardo la informacion", "", "info");
+          Swal.fire({
+            icon: "info",
+            title: "No se guardo la información",
+            confirmButtonText: "Ok",
+            confirmButtonColor: "#485eb2",
+          });
+          this.refrescarPadre();
         }
       });
     },
@@ -268,7 +273,8 @@ export default {
       }).then((result) => {
         if (result.isConfirmed) {
           this.axios.delete(this.url + id).then((response) => {
-            location.reload();
+            this.refrescarPadre();
+            this.cerrarModal();
           });
         } else {
           Swal.close();
