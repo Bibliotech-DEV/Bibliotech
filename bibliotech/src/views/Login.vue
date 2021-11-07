@@ -99,8 +99,8 @@ export default {
         })
         .catch(() => {
           Swal.fire({
+            confirmButtonColor: "#ad0202",
             icon: "error",
-            title: "Oops...",
             text: "Usuario y/o contraseña incorrectos",
           });
         });
