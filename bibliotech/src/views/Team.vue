@@ -14,7 +14,7 @@
             <b-card>
               <div class="team-one">
                 <b-img :src="require('../assets/images/andres.png')" />
-                <b-text>
+                <div>
                   <h4 class="name">Andrés Felipe Álvarez</h4>
                   <p class="info">
                     Tecnólogo en producción de Multimedia, apasionado por la
@@ -29,7 +29,7 @@
                     class="contact-team"
                     >Contacto</b-button
                   >
-                </b-text>
+                </div>
               </div>
             </b-card>
           </b-col>
@@ -37,7 +37,7 @@
             <b-card>
               <div class="team-three">
                 <b-img :src="require('../assets/images/kelly.jpg')" />
-                <b-text>
+                <div>
                   <h4 class="name">Kelly Monroy Carrillo</h4>
                   <p class="info">
                     Diseñadora digital y multimedia, ilustradora y artista, en
@@ -52,7 +52,7 @@
                     class="contact-team"
                     >Contacto</b-button
                   >
-                </b-text>
+                </div>
               </div>
             </b-card>
           </b-col>
@@ -60,7 +60,7 @@
             <b-card>
               <div class="team-four">
                 <b-img :src="require('../assets/images/luis.jpg')" />
-                <b-text>
+                <div>
                   <h4 class="name">Luis Fernando Delgado</h4>
                   <p class="info">
                     Administrador de empresas, interesado por el aprendizaje en
@@ -73,7 +73,7 @@
                     class="contact-team"
                     >Contacto</b-button
                   >
-                </b-text>
+                </div>
               </div>
             </b-card>
           </b-col>

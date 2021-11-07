@@ -4,18 +4,21 @@
     <main class="main-section">
       <!--Inicio de contenido de la página index-->
       <div class="line-container">
-          <h1>¡Bienvenido!</h1>
-          <h3>a nuestro sistema bibliotecario</h3>
+        <h1>¡Bienvenido!</h1>
+        <h3>a nuestro sistema bibliotecario</h3>
       </div>
       <b-container fluid-grow>
         <!--Sección para imagen y video central de los libros de Bibliotech-->
-        <row class="banner-video">
+        <div class="banner-video">
           <div class="video-container">
             <video autoplay muted loop poster="../assets/images/banner.png">
-              <source src="../assets/images/banner-video.mp4" type="video/mp4">
+              <source
+                src="../assets/images/banner-video.mp4"
+                type="video/mp4"
+              />
             </video>
           </div>
-        </row>
+        </div>
         <!--Saludo e invitación a ir a préstamo-->
         <div class="banner-text">
           <h3>¡Hola!</h3>
@@ -24,7 +27,7 @@
             <router-link to="Trade">Préstamo</router-link>
           </div>
         </div>
-        <div class="space" /> 
+        <div class="space" />
       </b-container>
     </main>
     <Footer />
