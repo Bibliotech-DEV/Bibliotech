@@ -27,3 +27,9 @@
   </div>
 </template>
 <!--Estilos para incoporar en estilos-->
+
+<style scoped>
+.logo {
+  margin-top: 0 !important;
+}
+</style>
