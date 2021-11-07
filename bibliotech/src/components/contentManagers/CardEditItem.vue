@@ -209,8 +209,8 @@ export default {
     };
   },
   methods: {
-    pushLogin() {
-      this.$router.push("Login");
+    pushItem() {
+      this.$router.go({ path: "Item" });
     },
     cerrarModal() {
       this.$bvModal.hide(`modal-item-${this.index}`);
@@ -242,7 +242,7 @@ export default {
         if (result.isConfirmed) {
           this.axios.put(this.url + id, this.form).then((response) => {
             this.cerrarModal();
-            this.pushLogin();
+            this.pushItem();
           });
         } else if (result.isDenied) {
           Swal.fire("No se guardo la informacion", "", "info");
