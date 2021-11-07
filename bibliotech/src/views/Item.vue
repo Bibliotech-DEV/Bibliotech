@@ -76,7 +76,7 @@ export default {
       ],
     };
   },
-  async created() {
+  created() {
     this.mostrar();
   },
   methods: {
