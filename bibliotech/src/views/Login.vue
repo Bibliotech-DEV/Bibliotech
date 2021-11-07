@@ -9,14 +9,14 @@
           <!-- Tarjeta blanca -->
           <div class="contenedor-login">
             <!-- Contenedor superior de la tarjeta blanca -->
-            <div class="login-header mb-4">
+            <router-link tag="div" class="login-header mb-4" to="/">
               <img
                 src="../assets/images/logo-minimal.png"
                 alt=""
                 fluid
                 class="logo"
               />
-            </div>
+            </router-link>
             <!-- Contenedor central de la tarjeta blanca -->
             <div class="login-inputs">
               <!-- Nombre de usuario -->
@@ -140,6 +140,7 @@ export default {
   display: flex;
   justify-content: center;
   z-index: 2;
+  cursor: pointer;
 }
 .logo {
   overflow: auto;
