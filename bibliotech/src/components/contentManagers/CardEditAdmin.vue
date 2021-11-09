@@ -143,14 +143,14 @@
                   class="boton-modal-b mb-0"
                   variant="danger"
                   @click="cerrarModal()"
-                  >Volver</b-button
+                  >Cancelar</b-button
                 >
                 <b-button
                   type="submit"
                   variant="success"
                   class="boton-modal-a mb-0"
                   @click="editar(form.id)"
-                  >Editar</b-button
+                  >Actualizar</b-button
                 >
               </div>
             </b-form>
